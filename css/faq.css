@@ -1,0 +1,532 @@
+/* ===== FAQ PAGE STYLES ===== */
+.faq-page {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.faq-page .main-content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+/* ===== FAQ HERO SECTION ===== */
+#faq-hero.hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 80px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+#faq-hero.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(124, 58, 237, 0.9) 100%);
+    z-index: 1;
+}
+
+#faq-hero.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+#faq-hero.hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+
+#faq-hero.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#faq-hero.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ===== FAQ CONTENT SECTION ===== */
+.faq-content-section {
+    padding: 80px 0;
+    background: transparent;
+    position: relative;
+}
+
+.faq-content-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 120, 255, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Search Section */
+.search-section {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(0, 120, 255, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+#faq-search {
+    flex: 1;
+    padding: 20px 60px 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    background: transparent;
+    color: var(--dark);
+}
+
+#faq-search::placeholder {
+    color: var(--gray);
+}
+
+.search-btn {
+    padding: 20px 30px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background: var(--primary-dark);
+}
+
+.search-help {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.search-help a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.search-help a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Categories */
+.faq-categories {
+    margin-bottom: 40px;
+}
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-btn {
+    padding: 12px 24px;
+    background: white;
+    border: 2px solid var(--gray-light);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.category-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 120, 255, 0.3);
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.category-title i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.accordion-item {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 120, 255, 0.1);
+}
+
+.accordion-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 25px 30px;
+    background: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.accordion-header:hover {
+    background: rgba(0, 120, 255, 0.03);
+}
+
+.accordion-item.active .accordion-header {
+    background: linear-gradient(135deg, rgba(0, 120, 255, 0.05) 0%, rgba(0, 180, 216, 0.05) 100%);
+    color: var(--primary);
+}
+
+.question {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.accordion-icon {
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    min-width: 20px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+}
+
+.accordion-content p {
+    padding: 0 30px 20px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.accordion-content ul {
+    padding: 0 30px 20px 50px;
+    margin: 0;
+}
+
+.accordion-content li {
+    padding: 8px 0;
+    color: var(--gray);
+    line-height: 1.6;
+    position: relative;
+}
+
+.accordion-content li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+}
+
+.accordion-content strong {
+    color: var(--dark);
+}
+
+/* Contact CTA */
+.contact-cta {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 15px 40px rgba(0, 120, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V100H1000V0C750,50 500,100 250,50S0,0,0,0Z" fill="rgba(255,255,255,0.1)"/></svg>');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: var(--primary);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.cta-btn.primary:hover {
+    background: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn.secondary:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+    #faq-hero.hero h2 {
+        font-size: 3rem;
+    }
+    
+    #faq-hero.hero p {
+        font-size: 1.2rem;
+    }
+    
+    .category-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-content-section {
+        padding: 60px 0;
+    }
+    
+    #faq-hero.hero {
+        min-height: 50vh;
+        margin-top: 70px;
+    }
+    
+    #faq-hero.hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    #faq-hero.hero p {
+        font-size: 1.1rem;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+    
+    #faq-search {
+        padding: 15px 20px;
+    }
+    
+    .search-btn {
+        padding: 15px;
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .category-filter {
+        gap: 10px;
+    }
+    
+    .category-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .accordion-header {
+        padding: 20px 25px;
+        font-size: 1rem;
+    }
+    
+    .accordion-content p,
+    .accordion-content ul {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .contact-cta {
+        padding: 40px 25px;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-btn {
+        width: 200px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    #faq-hero.hero h2 {
+        font-size: 2rem;
+    }
+    
+    .category-title {
+        font-size: 1.4rem;
+    }
+    
+    .accordion-header {
+        padding: 18px 20px;
+    }
+    
+    .question {
+        font-size: 1rem;
+    }
+    
+    .accordion-content p,
+    .accordion-content ul {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .contact-cta {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
